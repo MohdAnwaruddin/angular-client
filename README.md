@@ -1,1 +1,1 @@
-## Creadted USER registration forms Template Driven forms and Reactive forms and added validations
+## Creadted UI and integrated with server api endpoints for register,login,contact-us and product-categories
