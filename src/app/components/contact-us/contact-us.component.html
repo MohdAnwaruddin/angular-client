@@ -1,0 +1,24 @@
+<!-- contact-us.component.html -->
+<div class="lg:w-3/12 mt-5 p-10 shadow-lg mx-auto">
+    
+    <h3 class="text-3xl text-center font-semibold py-5 text-green-500">Contact Us</h3>
+
+    <form [formGroup]="contactusForm" (ngSubmit)="onSubmit()">
+        <div class="flex flex-col mt-2 mb-1">
+            <input formControlName="fullname" class="p-2 border border-gray-300 rounded" type="text" placeholder="Full Name">
+            <span *ngIf="contactusForm.get('fullname')?.invalid && contactusForm.get('fullname')?.touched" class="text-red-500">*Name is required</span>
+        </div>
+        <div class="flex flex-col mt-4 mb-1">
+            <input formControlName="email" class="p-2 border border-gray-300 rounded" type="email" placeholder="Email">
+            <span *ngIf="contactusForm.get('email')?.invalid && contactusForm.get('email')?.touched" class="text-red-500">*Valid Email is required</span>
+        </div>
+        <div class="flex flex-col mt-4 mb-1">
+            <textarea formControlName="message" class="p-2 border border-gray-300 rounded h-32" placeholder="Your Message"></textarea>
+            <span *ngIf="contactusForm.get('message')?.invalid && contactusForm.get('message')?.touched" class="text-red-500">*Message is required</span>
+        </div>
+        <button [disabled]="contactusForm.invalid" [class.disabled]="contactusForm.invalid" class="bg-green-500 p-2 rounded mt-3 text-white">Submit</button>
+    </form>
+    <div *ngIf="successMessage" class="bg-green-200 text-green-800 px-5 py-2 mt-3">{{ successMessage }}</div>
+    <div *ngIf="errorMessage" class="bg-red-200 text-red-800 px-5 py-2 mt-3">{{ errorMessage }}</div>
+
+</div>

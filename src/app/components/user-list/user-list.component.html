@@ -1,0 +1,10 @@
+
+<app-header [title]="title"  [total]="getTotal()"></app-header>
+<app-add-user (addUser)="addUser($event)"></app-add-user>
+@for(g of userlist; track g.id){
+  <app-user-item
+  [groc]="g"
+  (deleteUser)="handleDelete($event)"
+
+/>
+}

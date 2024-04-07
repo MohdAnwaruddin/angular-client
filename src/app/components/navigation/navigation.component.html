@@ -1,0 +1,106 @@
+<nav>
+    <ul>
+      <li>
+        <a
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="/products"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Products</a
+        >
+      </li>
+
+      <li>
+        <a
+          routerLink="/about"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >About</a
+        >
+      </li>
+  
+      <li>
+        <a
+          routerLink="/posts"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Posts</a
+        >
+      </li>
+  
+      <li>
+        <a
+          routerLink="/add-user"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Register</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="/register"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Register1</a
+        >
+      </li>
+      @if(!isLoggedIn){
+        <li>
+          <a
+            routerLink="/login"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Login</a
+          >
+        </li>
+        } @else{
+          <li>
+            <a
+              routerLink="/cart"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Cart</a
+            >
+          </li>
+        <li>
+          <a
+            routerLink="/logout"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Logout</a
+          >
+        </li>
+        }
+        <li>
+          <a
+            routerLink="/contact-us"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Contact-us</a
+          >
+        </li>
+      <li>
+        <a
+          routerLink="/comments"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Comments</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="/product-categories"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >product-categories</a
+        >
+      </li>
+    </ul>
+  </nav>

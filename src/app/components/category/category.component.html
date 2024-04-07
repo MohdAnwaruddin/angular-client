@@ -1,0 +1,14 @@
+<p>category works!</p>
+<!-- category.component.html -->
+<div class="products-container">
+    <div class="title">
+      <h1>{{ category.toUpperCase() }} PRODUCTS</h1>
+    </div>
+    <div class="products">
+      <div class="category-card" *ngFor="let product of products">
+        <img [src]="product.url" class="image" alt="">
+        <p class="categorytitle">{{ product.title }}</p>
+      </div>
+      <div *ngIf="products.length === 0">No Products Found</div>
+    </div>
+  </div>

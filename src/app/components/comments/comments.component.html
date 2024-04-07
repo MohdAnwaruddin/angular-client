@@ -1,0 +1,11 @@
+<h2>Comments List</h2>
+@for(p of comments; track p.id){
+    <div>
+      <p>Id - {{ p.id }}</p>
+      <p>name - {{ p.name }}</p>
+      <p>email - {{ p.email }}</p>
+      <p>body- {{ p.body }}</p>
+      <p>postId - {{ p.postId }}</p>
+      <hr />
+    </div>
+    }
