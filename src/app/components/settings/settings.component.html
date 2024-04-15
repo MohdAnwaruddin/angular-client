@@ -3,19 +3,19 @@
 {
 <div class="container">
     <div>
-        <form (ngSubmit)="onSubmit()" class="formgroup py-4 mt-4 border-t flex flex-col gap-5 items-center">
+        <form (ngSubmit)="onSubmit()" class="formgroup py-4 mt-4 mb-16 border-t flex flex-col gap-5 items-center">
             <div class="emailbox">
             <label for="email">E-mail :</label>
-            <input type="text" placeholder="Email" name="email" [(ngModel)]="email" class="input-field w-65" [disabled]="isDisabled"/>
+            <input type="text" placeholder="Email" name="email" [(ngModel)]="email" class="email input-field w-65" [disabled]="isDisabled"/>
           </div>
           <div class="usernamebox">
             <label for="username">User Name :</label>
             <input type="text" placeholder="Username" name="username" [(ngModel)]="userName" class="input-field w-65" (change)="onChange($event)" />
           </div>
-          <div class="cpasswordbox">
+          <!-- <div class="cpasswordbox">
             <label for="cpassword">Current password :</label>
             <input type="password" placeholder="Password" name="cpassword" [(ngModel)]="password" class="input-field w-65" (change)="onChange($event)"/>
-          </div>
+          </div> -->
           <div class="passwordbox">
             <label for="password">New password :</label>
             <input type="password" placeholder="Password" name="password" [(ngModel)]="newPassword" class="input-field w-65" (change)="onChange($event)" />

@@ -53,9 +53,9 @@ if ( name == "username") {
     this.userName = value
 }
     
-if ( name == "password") {
-  this.password = value
-}
+// if ( name == "password") {
+//   this.password = value
+// }
     
 if ( name == "newPassword") {
   this.newPassword = value
@@ -77,7 +77,7 @@ if ( name == "newPassword") {
 
       this.isdeleteClicked = true
 
-      this.router.navigate(['/register'])
+      this.router.navigate(['/logout'])
         
     })
   }
@@ -98,9 +98,10 @@ if ( name == "newPassword") {
 
   onSubmit(): void {
 
-    this.userService.handleUpdateUser(this.userName, this.email, this.password).subscribe(
+    this.userService.handleUpdateUser(this.userName, this.email, this.newPassword).subscribe(
       (response: any) => {
         console.log('User updated successfully:', response);
+        this.router.navigate(['/logout'])
        
       },
       (error: { message: string; }) => {

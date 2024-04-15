@@ -31,15 +31,18 @@ export class UserService {
  
 
   handleFetchUser(): Observable<userFetchResponse> {
+    this.userId = localStorage.getItem('_id')
     return this.http.get<userFetchResponse>(`https://reactserver-pink.vercel.app/user/users/${this.userId}`)
   }
 
   handleUpdateUser(username:any, email:any, password:any): Observable<userUpdateResponse> {
+    this.userId = localStorage.getItem('_id')
     return this.http.post<userUpdateResponse>(`https://reactserver-pink.vercel.app/user/users/${this.userId}`,{username, email, password})
   }
 
   handleDeleteUser(username:any, email:any, password:any): Observable<userDeleteResponse> {
-    return this.http.post<userDeleteResponse>(`https://reactserver-pink.vercel.app/user/users/${this.userId}`,{username, email, password})
+    this.userId = localStorage.getItem('_id')
+    return this.http.delete<userDeleteResponse>(`https://reactserver-pink.vercel.app/user/users/${this.userId}`)
   }
  
 }

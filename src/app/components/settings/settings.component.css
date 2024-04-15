@@ -58,7 +58,11 @@
     flex-direction: column;
     justify-content: center;
   }
-
+.email {
+    cursor: not-allowed;
+    background-color: rgb(135, 135, 135);
+    color: white;
+}
   .loginbutton{
    
     padding: 8px 12px;
