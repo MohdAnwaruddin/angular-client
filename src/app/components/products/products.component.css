@@ -31,6 +31,9 @@
     grid-template: auto/ auto;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+    @media (max-width: 650px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
 }
 .title {
     font-size: large;
@@ -92,7 +95,9 @@ text-align: left;
     color: black;
    text-align: center;
    width: 40vw;
-
+   @media (max-width: 650px) {
+    width: 80vw;
+  }
    
 }
 
@@ -108,6 +113,10 @@ text-align: left;
     border-radius: 12px;
     padding-left: 1.5rem;
     padding-bottom: 2rem;
+    @media (max-width: 650px) {
+        justify-content: center;
+        width: 80vw;
+      }
 
 }
 .bottom-buttons {
