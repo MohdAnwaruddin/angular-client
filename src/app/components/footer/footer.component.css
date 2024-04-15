@@ -1,0 +1,41 @@
+/* index.css */
+
+
+/* 
+.footer-container{
+    color: rgb(249, 249, 249);
+    padding: 2rem; 
+    background-color: rgb(8, 8, 8);
+    margin-left: 0vw;
+    margin-right: 0vw;
+    bottom: 0;
+    padding: 10px;
+} */
+
+
+
+.footer {
+    min-width: 10vw;
+    display: flex;
+    flex-direction: row;
+    gap: 9.3vw;
+    color: rgb(249, 249, 249);
+    padding: 2rem; /* Adjust the padding as needed */
+    background-color: rgb(8, 8, 8);
+    margin-left: 0vw;
+    margin-right: 0vw;
+    bottom: 0;
+    padding: 20px;
+  }
+  
+
+  .app-footer {
+    background-color: #333; /* Background color for the footer */
+    color: #fff; /* Text color */
+    text-align: center; /* Center-align text */
+    padding: 20px; /* Padding inside the footer */
+    position: fixed; /* Fixed position */
+    bottom: 0; /* Stick to the bottom of the viewport */
+    width: 100%; /* Full width */
+  }
+  

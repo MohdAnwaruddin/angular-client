@@ -1,0 +1,59 @@
+<!-- cart.component.html -->
+
+<div class="cart-container">
+    <h2>Your Cart</h2>
+
+    <!-- Display cart items -->
+
+    @if(isLoggedIn){
+
+        <div class="cartcard">
+
+
+        
+            <div class="cartItems.length > 0; else emptyCart">
+                <ul>
+                    <li *ngFor="let item of cartItems">
+                        <div class="cart-item">
+                            <div class="cart-item-info">
+                                <h3>{{ item.productId.title }}</h3>
+                                <p>Price: ${{ item.productId.price }}</p>
+                                <p>Quantity: {{ item.quantity }}</p>
+                            </div>
+                            <div class="cart-item-actions">
+                                <button (click)="handleUpdateCart(item.productId._id, item.quantity, 'increase')">+</button>
+                                <button (click)="handleUpdateCart(item.productId._id, item.quantity, 'decrease')"
+                                    [disabled]="item.quantity === 1">-</button>
+                                <button (click)="handleDeleteCart(item.productId._id)">Remove</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    }
+
+    @else {
+
+
+        <div>
+            <p class="carttext"> Please Login to See Cart Items   </p>
+            <button class="loginbutton" (click) = "clickLogin()"> Login </button>
+        </div>
+
+
+    }
+    
+
+
+    <!-- Empty cart message -->
+    <ng-template #emptyCart>
+        <p>Your cart is empty</p>
+    </ng-template>
+</div>
+
+<!-- Cart Total -->
+<div class="cart-total" *ngIf="cartItems.length > 0">
+    <!-- <h3>Total: ${{ calculateTotal() }}</h3> -->
+    <!-- <button (click)="checkout()">Checkout</button> -->
+</div>

@@ -1,14 +1,13 @@
-<p>category works!</p>
 <!-- category.component.html -->
 <div class="products-container">
     <div class="title">
       <h1>{{ category.toUpperCase() }} PRODUCTS</h1>
     </div>
     <div class="products">
-      <div class="category-card" *ngFor="let product of products">
+      <div class="product-card" *ngFor="let product of products" (click)="navigateToProduct(product._id)">
         <img [src]="product.url" class="image" alt="">
-        <p class="categorytitle">{{ product.title }}</p>
+        <p class="productTitle">{{ product.title }}</p>
       </div>
-      <div *ngIf="products.length === 0">No Products Found</div>
+      <div *ngIf="products.length === 0">No Products Found!</div>
     </div>
   </div>

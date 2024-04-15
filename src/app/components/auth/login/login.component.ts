@@ -25,6 +25,15 @@ export class LoginComponent {
     
   });
 
+  onRegisterClick() : void  {
+
+    this.router.navigateByUrl('/register')
+
+  }
+  //   console.log('1111111')
+  //  
+  
+
   onSubmit() {
     this.authService
       .login(this.loginForm.value.username!, this.loginForm.value.password!)
@@ -33,7 +42,7 @@ export class LoginComponent {
           console.log(token);
           // this.authToken = token;
           //localStorage.setItem('authtoken', token.token);
-          this.router.navigateByUrl('/products');
+          this.router.navigateByUrl('/product-categories');
         },
         error: (e) => {
           console.log(e);

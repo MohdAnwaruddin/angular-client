@@ -1,0 +1,153 @@
+/* form > div {
+    @apply flex flex-col gap-2;
+  }
+  
+  input,
+  textarea {
+    @apply shadow-md px-6 py-2 border border-slate-300;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } */
+
+  .emailbox,
+  .usernamebox,
+  .cpasswordbox,
+  .passwordbox {
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+
+  .container {
+    display: grid;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+
+    background-color: white;
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(2, 1fr);
+      }
+      @media (max-width: 750px) {
+          grid-template-columns: repeat(1, 1fr);
+      }
+
+  }
+
+  .carttext{
+    color:black;
+    padding-bottom: 10px;
+    justify-content: center;
+    margin-top: 100px;
+    text-align: center;
+    font-size: larger;
+    font-weight: bolder;
+  }
+
+  .settingspage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .loginbutton{
+   
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color:#008000;
+    color: #fff;
+    cursor: pointer;
+  width: 7rem;
+  margin-top: 2rem;
+  align-self: center;
+    
+
+  }
+  
+  .formgroup {
+    padding-top: 1rem;  /* Equivalent to py-4 (16px) */
+    padding-bottom: 1rem;  /* Equivalent to py-4 (16px) */
+    margin-top: 1rem;  /* Equivalent to mt-4 (16px) */
+    border-top: 1px solid #e2e8f0;  /* Equivalent to border-t */
+    display: flex;  /* Equivalent to flex */
+    flex-direction: column;  /* Equivalent to flex-col */
+    gap: 1.25rem;  /* Equivalent to gap-5 (20px) */
+    align-items: center;  /* Equivalent to items-center */
+  }
+  
+  .label {
+    font-weight: bold;
+    font-size: larger;
+    padding-right: 2rem;
+  }
+  
+  .input-field {
+    width: max-content;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding-left: 2rem;
+  }
+  
+  .deltetext{
+    margin: 10px;
+  }
+  .error-message {
+    color: #f00;
+    margin-top: 5px;
+  }
+  
+  .success-message {
+    color: #008000;
+    margin-top: 5px;
+  }
+  
+  /* .btn-submit {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+  } */
+  
+  .btn-submit:hover {
+    background-color: #218838;
+  }
+  
+  .deleteButton {
+    background-color: #218838;
+    display: grid;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 18px 20px;
+    cursor: pointer;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .deletebutton{
+    justify-content: center;
+    display: grid;
+    grid-template-rows: auto;
+    padding-bottom: 10px;
+
+  }
+  
+  .btn-delete:hover {
+    background-color: #c82333;
+  }
+  

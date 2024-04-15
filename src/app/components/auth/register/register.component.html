@@ -1,8 +1,8 @@
-<div class="lg:w-3/12 mt-5 p-10 shadow-lg mx-auto">
-    <h3 class="text-3xl text-center font-semibold py-5">Registering</h3>
+<div class="lg:w-3/12 mt-5 mb-16 p-10 shadow-lg mx-auto">
+    <h3 class="text-3xl text-center font-semibold py-5">Register</h3>
     <form [formGroup]="registerForm" class="flex flex-col"  (ngSubmit)="onSubmit()">
         <div class="flex flex-col mt-2 mb-1">
-            <input formControlName="username" class="p-2 border border-gray-300 rounded"type="text" placeholder="Username">
+            <input formControlName="username" class="p-2 border border-gray-300 rounded"type="text" placeholder="User name">
             @if(registerForm.get('username')?.invalid && registerForm.get('username')?.touched)
             {<span class="text-red-500">*UserName is required</span>}
     
@@ -11,7 +11,7 @@
     
         </div>
         <div class="flex flex-col mt-4 mb-1">
-            <input formControlName="email" class="p-2 border border-gray-300 rounded"type="text" placeholder="email">
+            <input formControlName="email" class="p-2 border border-gray-300 rounded"type="text" placeholder="Email">
             
     
             @if(registerForm.get('email')?.invalid && registerForm.get('email')?.touched) 
@@ -22,7 +22,7 @@
     
         </div>
         <div class="flex flex-col mt-4 mb-1">
-            <input formControlName="password" class="p-2 border border-gray-300 rounded"type="text" placeholder="password">
+            <input formControlName="password" class="p-2 border border-gray-300 rounded"type="text" placeholder="Password">
             
             @if(registerForm.get('password')?.invalid && registerForm.get('password')?.touched) 
             {<span class="text-red-500">*Password is required</span>  }
@@ -32,7 +32,7 @@
     
         </div>
         <div class="flex flex-col mt-4 mb-1">
-            <input formControlName="confirmpassword" class="p-2 border border-gray-300 rounded"type="text" placeholder="confirmpassword">
+            <input formControlName="confirmpassword" class="p-2 border border-gray-300 rounded"type="text" placeholder="Confirm password">
             
             @if(registerForm.get('confirmpassword')?.invalid && registerForm.get('confirmpassword')?.touched) 
             {<span class="text-red-500">*confirmpassword is required</span>  }
@@ -53,7 +53,7 @@
         <span>
             Already have account?
         </span>
-        <a class="text-green-600 ml-2 cursor-pointer">Login here</a>
+        <a class="text-green-600 ml-2 cursor-pointer" (click) = "onLoginCLick()">Login here</a>
     </div>
     </div>
     

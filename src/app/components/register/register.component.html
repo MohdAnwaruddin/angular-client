@@ -21,8 +21,11 @@
     
 
     </div>
+<!-- 
+    required minlength="8" maxlength="20" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$" -->
+
     <div class="flex flex-col mt-4 mb-1">
-        <input formControlName="password" class="p-2 border border-gray-300 rounded"type="text" placeholder="password">
+        <input formControlName="password" class="p-2 border border-gray-300 rounded"type="text" placeholder="password" required minlength="8" maxlength="10" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$" >
         
         @if(registerForm.get('password')?.invalid && registerForm.get('password')?.touched) 
         {<span class="text-red-500">*Password is required</span>  }

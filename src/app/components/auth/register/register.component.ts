@@ -27,6 +27,11 @@ export class RegisterComponent {
     
   });
 
+
+  onLoginCLick() {
+    this.router.navigateByUrl('/login')
+  }
+
   onSubmit() {
     this.authService
       .register(
@@ -39,7 +44,7 @@ export class RegisterComponent {
           console.log(token);
           // this.authToken = token;
           //localStorage.setItem('authtoken', token.token);
-          this.router.navigateByUrl('/about');
+          this.router.navigateByUrl('/login');
         },
         error: (e) => {
           console.log(e.error.errors);

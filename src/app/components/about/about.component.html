@@ -1,2 +1,24 @@
-<p>about works!</p>
-<button (click)="gotoProducts()">Go to products page </button>
+<div class="about-us">
+    <div class="header">
+        <h1 class="title"> About Us</h1>
+      </div>
+    <div class="people-container">
+        <div class="card" *ngFor="let person of people" >
+            <div class="card-header">
+              <h3>Name : {{ person.name }}</h3>
+              <p>ID: {{ person.id }}</p>
+              <p>Email: {{ person.email }}</p>
+            </div>
+            <div class="card-body">
+              <p><strong>Experience:</strong> {{ person.experience }}</p>
+              <p><strong>Skills:</strong> {{ person.skills.join(', ') }}</p>
+              <p><strong>Responsibilities:</strong></p>
+              <ul>
+                <li *ngFor="let responsibility of person.responsibilities">{{ responsibility }}</li>
+              </ul>
+            </div>
+          </div>
+    </div>
+   
+  </div>
+  
