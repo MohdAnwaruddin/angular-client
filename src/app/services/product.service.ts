@@ -7,6 +7,18 @@ export interface CategoryResponse {
   data: { name: string; url: string[] }[];
 }
 
+export interface ProductResponse {
+  success: boolean;
+  data: { success: boolean; data: object[] }[];
+}
+
+export interface ProductDetailsResponse {
+  success: boolean;
+  data: { success: boolean; data: object[] }[];
+}
+
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -20,8 +32,12 @@ export class ProductService {
     return this.http.get<CategoryResponse>(this.url);
   }
 
-  fetchProducts(category: string): Observable<any[]> {
-    return this.http.post<any[]>('http://localhost:3001/products/fetch-products', { categoryName: category });
+  fetchProducts(category: string): Observable<ProductResponse> {
+    return this.http.post<ProductResponse>('http://localhost:3001/products/fetch-products', { categoryName: category });
+  }
+
+  fetchProductDetails(id: string): Observable<ProductDetailsResponse> {
+    return this.http.post<ProductDetailsResponse>('http://localhost:3001/products/fetch-product-details', { id: id });
   }
 
 }

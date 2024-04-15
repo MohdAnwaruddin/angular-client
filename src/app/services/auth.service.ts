@@ -37,6 +37,7 @@ export class AuthService {
 
           localStorage.setItem('authToken', response.token);
           localStorage.setItem('_id', response.user._id);
+          
         })
       );
   }
@@ -65,6 +66,8 @@ export class AuthService {
         })
       );
   }
+
+
 
 
 }
