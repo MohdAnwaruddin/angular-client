@@ -24,7 +24,7 @@ export interface ProductDetailsResponse {
 })
 export class ProductService {
 
-  private url: string = 'http://localhost:3001/products/fetch-categories';
+  private url: string = 'https://reactserver-pink.vercel.app/products/fetch-categories';
 
   constructor(private http: HttpClient) { }
 
@@ -33,11 +33,11 @@ export class ProductService {
   }
 
   fetchProducts(category: string): Observable<ProductResponse> {
-    return this.http.post<ProductResponse>('http://localhost:3001/products/fetch-products', { categoryName: category });
+    return this.http.post<ProductResponse>('https://reactserver-pink.vercel.app/products/fetch-products', { categoryName: category });
   }
 
   fetchProductDetails(id: string): Observable<ProductDetailsResponse> {
-    return this.http.post<ProductDetailsResponse>('http://localhost:3001/products/fetch-product-details', { id: id });
+    return this.http.post<ProductDetailsResponse>('https://reactserver-pink.vercel.app/products/fetch-product-details', { id: id });
   }
 
 }

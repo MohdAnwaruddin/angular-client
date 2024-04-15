@@ -19,8 +19,8 @@ export class AuthService {
   isLoggedIn$ = this._isLoggedIn$.asObservable();
 
   private myToken = '';
-  private url: string = 'http://localhost:3001/login';
-  private urlRegister: string = 'http://localhost:3001/register';
+  private url: string = 'https://reactserver-pink.vercel.app/login';
+  private urlRegister: string = 'https://reactserver-pink.vercel.app/register';
 
   constructor(private http: HttpClient) {}
 

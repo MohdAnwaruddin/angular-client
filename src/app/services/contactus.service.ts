@@ -15,7 +15,7 @@ export interface IContactus {
   providedIn: 'root'
 })
 export class ContactusService {
-  private url: string = 'http://localhost:3001/contact';
+  private url: string = 'https://reactserver-pink.vercel.app/contact';
 
   constructor(private http: HttpClient) { }
 

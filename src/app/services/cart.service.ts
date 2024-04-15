@@ -33,20 +33,20 @@ export class CartService {
   constructor(private http: HttpClient) { }
 
   handleUpdateCart(productId: string, userId:string, quantity:number): Observable<cartUpdateResponse> {
-    return this.http.post<cartUpdateResponse>('http://localhost:3001/cart/update-product', { productId, userId, quantity });
+    return this.http.post<cartUpdateResponse>('https://reactserver-pink.vercel.app/cart/update-product', { productId, userId, quantity });
   }
 
   handleFetchCart(userId : string) : Observable<fetchCartResponse> {
-    return this.http.post<fetchCartResponse>('http://localhost:3001/cart/fetch-cart', { userId });
+    return this.http.post<fetchCartResponse>('https://reactserver-pink.vercel.app/cart/fetch-cart', { userId });
 
   }
 
   handleAddCart(userId : string, productId:string, quantity:number) :Observable<addCartResponse> {
-    return this.http.post<addCartResponse> ('http://localhost:3001/cart/add-product', {userId, productId,quantity } )
+    return this.http.post<addCartResponse> ('https://reactserver-pink.vercel.app/cart/add-product', {userId, productId,quantity } )
   }
 
   handleDeleteCart(productId:string, userId:string) :Observable<deleteCartResponse> {
-return this.http.post<deleteCartResponse> ( 'http://localhost:3001/cart/delete-product',{ productId,userId} )
+return this.http.post<deleteCartResponse> ( 'https://reactserver-pink.vercel.app/cart/delete-product',{ productId,userId} )
   }
 }
 
